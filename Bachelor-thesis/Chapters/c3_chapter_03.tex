@@ -1,0 +1,63 @@
+%!TEX root = ../thesis.tex
+% створюємо розділ
+\chapter{(Назва третього розділу)}
+\label{chap:theory}
+
+\section{(Якийсь підрозділ)}
+
+У третьому розділі варто наводити розв'язання поставленої перед вами 
+задачі у теоретичному або аналітичному сенсі (хоча, звісно, все залежить 
+від того, яка саме задача перед вами поставлена).
+
+Для подання матеріалів можна використовувати таблиці (наприклад, 
+табл. \ref{tab_weight}). 
+
+    \begin{table}[ht]
+    \caption{Розрахунок якоїсь величини у декілька кроків}
+    \label{tab_weight}
+    \centering
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline \multirow{2}{*}{Параметр $x_i$} & \multicolumn{4}{c|}{Параметр $x_j$} & 
+            \multicolumn{2}{c|}{Перший крок} & \multicolumn{2}{c|}{Другий крок} \\
+        \cline{2-9} & $X_1$ & $X_2$ & $X_3$ & $X_4$ & $w_i$ & 
+            ${K_\text{в}}_i$ & $w_i$ & ${K_\text{в}}_i$ \\
+        \hline $X_1$ & 1 & 1 & 1.5 & 1.5 & 5 & 0.31 & 19 & 0.32 \\
+        \hline $X_2$ & 1 & 1 & 1.5 & 1.5 & 5 & 0.31 & 19 & 0.32 \\
+        \hline $X_3$ & 0.5 & 0.5 & 1 & 0.5 & 2.5 & 0.16 & 9.25 & 0.16 \\
+        \hline $X_4$ & 0.5 & 0.5 & 1.5 & 1 & 3.5 & 0.22 & 12.25 & 0.20 \\
+        \hline \multicolumn{5}{|c|}{Разом:} & 16 & 1 & 59.5 & 1 \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+Бажано, щоб кожен пункт завдань, окреслених у вступі, відповідав певному 
+розділу або підрозділу у дипломній роботі.
+
+\begin{theorem}
+Нумерація у наступних розділах також проставляється автоматично та коректно.
+\end{theorem}
+
+\section{(Якийсь наступний підрозділ)}
+
+Для подання матеріалів також дуже зручними є рисунки (наприклад, рис.
+\ref{fig_sudak}).
+
+
+\begin{figure}[ht]
+\centering
+    \begin{subfigure}[b]{0.5\textwidth}    
+        \includegraphics[scale=0.3]{Images/Sudak.png}
+        \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[scale=0.3]{Images/Tudak.png}
+        \caption{}
+    \end{subfigure}
+ 
+    \caption{Різні види риб: (a) судак, (б) тудак}
+    \label{fig_sudak}
+\end{figure}
+
+\chapconclude
+
+Наприкінці розділу знову наводяться коротенькі підсумки.
