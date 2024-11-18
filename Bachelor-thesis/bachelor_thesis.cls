@@ -33,7 +33,6 @@
 
 \RequirePackage{upgreek}                                % пакет для прямих грецьких літер
 \RequirePackage{textcomp}                               % потрібні символи в режимі математичних формул
-\newcommand{\No}{\textnumero} 
 \RequirePackage{mathtext}                               % потрібні символи в режимі математичних формул
 
 % пакети для форматування відступів та полів
