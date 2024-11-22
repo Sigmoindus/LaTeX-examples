@@ -1,0 +1,65 @@
+%!TEX root = main.tex
+
+%%% Основні відомості %%%
+%\newcommand{\UDC}                      % УДК
+%{(впишіть правильний УДК!)}            % УДК виглядає приблизно як 004.056.5 або 513.2, або навіть 004.056.5:513.2+519.1
+% Для того, щоб знайти правильний УДК, використовуйте каталог https://teacode.com/online/udc/
+
+% Define genders for student and checker
+
+\newcommand{\reportAuthor}             % Прізвище, ініціали автора
+{Іванов Петро Сидорович}
+% \newcommand{\reportAuthorShort}        % ПІБ автора коротко
+% {Петро ІВАНОВ}
+\newcommand{\authorGender}
+{male}                % стать автора
+
+\newcommand{\reportAuthorGroup}        % група автора
+{КМ-N3}
+\newcommand{\reportTitle}              % Назва роботи
+{Назва роботи}
+%% використовуйте символ "\par" або "\\" для розбиття назви на декілька рядків
+
+\newcommand{\reportCourse}
+{\MakeUppercase{Назва предмету}}
+\newcommand{\supervisorFio}            % Науковий керівник, Прізвище, ініціали
+{Прізвище І. П.}
+\newcommand{\supervisorRegalia}        % Науковий керівник: посада, степінь, звання
+{посада, ступінь, звання}              % наприклад: доцент кафедри ПМА, канд. техн. наук, доцент
+
+\newcommand{\supervisorGender}
+{female}
+
+\newcommand{\YearOfDefence}            % рік захисту
+{2024}
+
+% ************************************************************* %
+% Обробка даних
+% ************************************************************* %
+
+
+% Command for author actions (student)
+
+\newcommand{\authorMake}{%
+  \ifthenelse{\equal{\authorGender}{male}}{Виконав}{%
+    \ifthenelse{\equal{\authorGender}{female}}{Виконала}{%
+      \textbf{Error: Author gender not set!}%
+    }%
+  }%
+}
+\newcommand{\authorPerformed}{%
+  \ifthenelse{\equal{\authorGender}{male}}{студент}{%
+    \ifthenelse{\equal{\authorGender}{female}}{студентка}{%
+      \textbf{Error: Author gender not set!}%
+    }%
+  }%
+}
+
+% Command for supervisor actions (checker)
+\newcommand{\supervisorReviewed}{%
+  \ifthenelse{\equal{\supervisorGender}{male}}{Перевірив}{%
+    \ifthenelse{\equal{\supervisorGender}{female}}{Перевірила}{%
+      \textbf{Error: Supervisor gender not set!}%
+    }%
+  }%
+}

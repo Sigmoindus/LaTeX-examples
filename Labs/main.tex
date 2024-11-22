@@ -1,10 +1,16 @@
-% !TEX TS-program=xelatex
+% !TEX TS-program = xelatex 
+% !TEX spellcheck = uk_UA
+% !TEX options = --output-directory=build  
+% !TEX encoding = UTF-8  
 
+% *********** Приклад оформлення лабораторних робіт ************
+% ************* Зміни Косенка О. та Шкарупило М.  **************
+% ********************** На основі файлу ***********************
 % ********** Приклад оформлення пояснювальної записки **********
 % *********  до атестаційної роботи ступеня бакалавра **********
 % ***  Виправлення Таврова Д.Ю. на основі файлу Яковлєва С.В. **
 
-\documentclass{bachelor_thesis}
+\documentclass{labs}
 
 % Додаткові пакети вносьте у цей файл
 \input{01_packages}
@@ -17,7 +23,7 @@
 
 % Це файл з інформацією про джерела, на які посилаються в роботі
 % Якщо формувати бібліографію вручну, то це варто закоментувати
-\addbibresource{thesis.bib}
+\addbibresource{main.bib}
 
 % Починаємо верстку документа
 \begin{document}
@@ -25,15 +31,6 @@
 % Створюємо титульну сторінку
 \input{a00_title}
 
-% Створюємо завдання
-\input{a01_specification}
-
-% У даному костильному рішенні перші три сторінки (титул та завдання на 
-% роботу) друкуються окремо від основної частини тез.
-% Тому перша сторінка сформованого документу нумерується як четверта
-
-% Створюємо анотації
-\input{Chapters/a1_abstract}
 
 % Створюємо зміст
 %\pagenumbering{gobble}
@@ -41,10 +38,6 @@
 \cleardoublepage
 %\pagenumbering{arabic}
 %\setcounter{page}{8}     %!!! -- продумати, як автоматизувати номер сторінки
-
-% Створюємо перелік умовних позначень, скорочень і термінів
-\shortings
-\input{Chapters/a2_shortings}
 
 % Створюємо вступ
 \intro
@@ -54,7 +47,6 @@
 \input{Chapters/c1_chapter_01}
 \input{Chapters/c2_chapter_02}
 \input{Chapters/c3_chapter_03}
-\input{Chapters/c4_chapter_04}
 
 % Створюємо висновки
 \conclusions
@@ -62,25 +54,24 @@
 
 % Додаємо бібліографію
 %%%%%%%% Якщо ви використовуєте bibtex, оце все треба розкоментувати звідси...
-%\defbibenvironment{bibliography}
-%  {\list
-%     {\printfield[labelnumberwidth]{labelnumber}}
-%     {\setfontsize{14}%
-%     }}
-%  {\endlist}
-%  {\item}
-%
-%\printbibliography[heading=bibintoc,title={Перелік посилань}]
+\defbibenvironment{bibliography}
+  {\list
+     {\printfield[labelnumberwidth]{labelnumber}}
+     {\setfontsize{14}%
+     }}
+  {\endlist}
+  {\item}
+
+\printbibliography[heading=bibintoc,title={Перелік посилань}]
 %%%%%%%% ...по осюди
 
 % Замість бібтеху можна вписати та оформити бібліографію вручну
-\input{Chapters/w2_bibliography}
+% \input{Chapters/w2_bibliography}
 
 % Створюємо додатки (дивись у файли додатків для пояснень)
 % Якщо ви маєте меншу або більшу кількість додатків, модифікуйте ці рядки у відповідний спосіб
 % Якщо ви не маєте додатків, просто закоментуйте ці рядки:
 \input{Chapters/z1_appendix_A}
-\input{Chapters/z2_appendix_B}
 
 
 % Нарешті
